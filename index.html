@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Opportunité Commerciale Ubbik</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        .presentation {
+            max-width: 100%;
+            background: white;
+        }
+
+        .slide {
+            padding: 20px 15px;
+            min-height: 100vh;
+            display: block;
+            border-bottom: 3px solid rgb(72, 82, 186);
+        }
+
+        .slide-number {
+            background: rgb(72, 82, 186);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: rgb(72, 82, 186);
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: rgb(72, 82, 186);
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: rgb(236, 72, 153);
+            font-weight: bold;
+        }
+
+        .hero-slide {
+            background: linear-gradient(135deg, rgb(72, 82, 186) 0%, rgb(236, 72, 153) 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-slide h1 {
+            color: white;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        .hero-slide .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .hero-slide .tagline {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgb(72, 82, 186), rgb(236, 72, 153));
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(72, 82, 186, 0.1), rgba(236, 72, 153, 0.1));
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid rgb(72, 82, 186);
+            margin: 15px 0;
+        }
+
+        .revenue-card {
+            background: white;
+            border: 2px solid rgb(236, 72, 153);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .revenue-amount {
+            font-size: 2em;
+            font-weight: bold;
+            color: rgb(236, 72, 153);
+            margin-bottom: 10px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .benefits-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            color: rgb(236, 72, 153);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .commission-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.8em;
+        }
+
+        .commission-table th {
+            background: rgb(72, 82, 186);
+            color: white;
+            padding: 10px 5px;
+            text-align: left;
+        }
+
+        .commission-table td {
+            padding: 10px 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .commission-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgb(72, 82, 186), rgb(236, 72, 153));
+            color: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            background: white;
+            color: rgb(72, 82, 186);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            margin: 10px 5px;
+            width: 100%;
+            max-width: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .process-step {
+            background: white;
+            border: 2px solid rgb(72, 82, 186);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .step-number {
+            background: rgb(72, 82, 186);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-weight: bold;
+        }
+
+        .testimonial {
+            background: white;
+            border-left: 4px solid rgb(236, 72, 153);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: rgb(72, 82, 186);
+            font-size: 0.8em;
+        }
+
+        .target-card {
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .target-card h4 {
+            color: rgb(72, 82, 186);
+            margin-bottom: 10px;
+        }
+
+        .navigation-hint {
+            background: rgba(72, 82, 186, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: rgb(72, 82, 186);
+        }
+
+        /* Animations légères */
+        .slide {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive ultra mobile */
+        @media (max-width: 400px) {
+            h1 { font-size: 1.5em; }
+            .hero-slide h1 { font-size: 1.8em; }
+            .stat-grid { grid-template-columns: 1fr; }
+            .stat-number { font-size: 1.8em; }
+            .commission-table { font-size: 0.7em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        
+        <!-- Slide 1: Hero -->
+        <div class="slide hero-slide">
+            <div class="slide-number">1/10</div>
+            <h1>Opportunité Commerciale Exceptionnelle</h1>
+            <p class="subtitle">Devenez Commercial Indépendant Ubbik</p>
+            <div class="tagline">
+                Jusqu'à 60 000€ de revenus annuels avec une solution qui se vend d'elle-même
+            </div>
+        </div>
+
+        <!-- Slide 2: Le Marché -->
+        <div class="slide">
+            <div class="slide-number">2/10</div>
+            <h1>Un Marché Gigantesque</h1>
+            
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">du temps perdu quotidiennement</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">des PME mal organisées</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">€800</div>
+                    <div class="stat-label">coût mensuel par employé</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">23 min</div>
+                    <div class="stat-label">pour retrouver sa concentration</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💰 Douleur Universelle</h3>
+                <p><strong>Chaque PME perd 16h par semaine par employé</strong> en inefficacités. C'est un problème de €12 milliards en France que les dirigeants cherchent désespérément à résoudre.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Pourquoi Facile à Vendre -->
+        <div class="slide">
+            <div class="slide-number">3/10</div>
+            <h1>Pourquoi c'est FACILE à Vendre ?</h1>
+            
+            <ul class="benefits-list">
+                <li><strong>ROI immédiat :</strong> 800% dès la première année</li>
+                <li><strong>Problème urgent :</strong> Tous les dirigeants le vivent quotidiennement</li>
+                <li><strong>Démo convaincante :</strong> 45 min = client convaincu</li>
+                <li><strong>Prix accessible :</strong> 350€/an par utilisateur seulement</li>
+                <li><strong>Pas de vraie concurrence :</strong> Solution unique sur le marché</li>
+                <li><strong>Cycle court :</strong> 3-6 semaines de la démo à la signature</li>
+            </ul>
+
+            <div class="revenue-card">
+                <h3>💰 Vos Revenus Potentiels</h3>
+                <div class="revenue-amount">38 400€</div>
+                <p><strong>Avec seulement 2 ventes par mois</strong></p>
+                <p>+ Commissions récurrentes à vie sur chaque client</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: Cibles Parfaites -->
+        <div class="slide">
+            <div class="slide-number">4/10</div>
+            <h1>Vos Cibles PARFAITES</h1>
+            
+            <div class="target-card">
+                <h4>🎯 PME 5-20 employés</h4>
+                <p><strong>Ticket : 5 250€/an</strong></p>
+                <p>Dirigeants débordés, ROI évident</p>
+                <p><em>Commission : 1 575€ + 787€/an récurrent</em></p>
+            </div>
+
+            <div class="target-card">
+                <h4>🚀 Startups en croissance</h4>
+                <p><strong>Ticket : 1 750€/an</strong></p>
+                <p>Fondateurs qui veulent structurer</p>
+                <p><em>Commission : 525€ + 262€/an récurrent</em></p>
+            </div>
+
+            <div class="target-card">
+                <h4>💼 Services professionnels</h4>
+                <p><strong>Ticket : 7 000€/an</strong></p>
+                <p>Cabinets conseil, argument temps = argent</p>
+                <p><em>Commission : 2 100€ + 1 050€/an récurrent</em></p>
+            </div>
+        </div>
+
+        <!-- Slide 5: Commissions -->
+        <div class="slide">
+            <div class="slide-number">5/10</div>
+            <h1>Commissions Très Attractives</h1>
+            
+            <table class="commission-table">
+                <thead>
+                    <tr>
+                        <th>Performance</th>
+                        <th>Commission Initiale</th>
+                        <th>Récurrente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Standard</strong></td>
+                        <td>30% année 1</td>
+                        <td>15% à vie</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Top (10+ ventes)</strong></td>
+                        <td>35% année 1</td>
+                        <td>17.5% à vie</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Champion (20+)</strong></td>
+                        <td>40% année 1</td>
+                        <td>20% à vie</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h3>💎 Exemple Concret</h3>
+                <p><strong>15 ventes en année 1 = 63 750€</strong></p>
+                <p>• Commission initiale : 23 625€</p>
+                <p>• Récurrent immédiat : 11 812€</p>
+                <p>• Année 2 : 28 313€ automatique</p>
+            </div>
+        </div>
+
+        <!-- Slide 6: Processus Simple -->
+        <div class="slide">
+            <div class="slide-number">6/10</div>
+            <h1>Processus Ultra Simplifié</h1>
+            
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Appel Qualification (15 min)</h4>
+                <p>Script fourni + guide. Taux : 70%</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Démo Personnalisée (45 min)</h4>
+                <p>Plateforme prête. Conversion : 85%</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Calcul ROI (10 min)</h4>
+                <p>Calculateur automatique</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Signature (1 semaine)</h4>
+                <p>Proposition auto-générée</p>
+            </div>
+        </div>
+
+        <!-- Slide 7: Support -->
+        <div class="slide">
+            <div class="slide-number">7/10</div>
+            <h1>Support de Champion</h1>
+            
+            <h3>🎓 Formation (1 semaine)</h3>
+            <ul class="benefits-list">
+                <li>Maîtrise produit complète</li>
+                <li>Techniques de vente Ubbik</li>
+                <li>Gestion des objections</li>
+                <li>Mise en situation réelle</li>
+            </ul>
+
+            <h3>🛠️ Outils Fournis</h3>
+            <ul class="benefits-list">
+                <li>CRM intégré avec pipeline</li>
+                <li>5-10 leads qualifiés/semaine</li>
+                <li>Plateforme de démo</li>
+                <li>Support closing pour gros deals</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>💎 Avantage Exclusif</h3>
+                <p><strong>Nous vous fournissons les leads qualifiés</strong> dans votre zone géographique.</p>
+            </div>
+        </div>
+
+        <!-- Slide 8: Témoignages -->
+        <div class="slide">
+            <div class="slide-number">8/10</div>
+            <h1>Ce que Disent Nos Vendeurs</h1>
+            
+            <div class="testimonial">
+                <div class="testimonial-quote">
+                    "47 000€ de commissions en 6 mois. La solution se vend vraiment d'elle-même, les prospects comprennent immédiatement la valeur."
+                </div>
+                <div class="testimonial-author">Sarah M. - 8 mois chez Ubbik</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-quote">
+                    "Le support est incroyable. Ils m'accompagnent sur chaque deal, me fournissent des leads qualifiés. Résultat : 23 ventes en 12 mois."
+                </div>
+                <div class="testimonial-author">Marc D. - 12 mois chez Ubbik</div>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">73%</div>
+                    <div class="stat-label">atteignent 30k€ en année 1</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">67j</div>
+                    <div class="stat-label">délai première vente</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Simulation Revenus -->
+        <div class="slide">
+            <div class="slide-number">9/10</div>
+            <h1>Simulation de VOS Revenus</h1>
+            
+            <table class="commission-table">
+                <thead>
+                    <tr>
+                        <th>Ventes/Mois</th>
+                        <th>Année 1</th>
+                        <th>Année 2</th>
+                        <th>Année 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 vente/mois</td>
+                        <td>18 900€</td>
+                        <td>28 350€</td>
+                        <td>37 800€</td>
+                    </tr>
+                    <tr style="background: rgba(236, 72, 153, 0.1);">
+                        <td><strong>2 ventes/mois</strong></td>
+                        <td><strong>37 800€</strong></td>
+                        <td><strong>56 700€</strong></td>
+                        <td><strong>75 600€</strong></td>
+                    </tr>
+                    <tr>
+                        <td>4 ventes/mois</td>
+                        <td>75 600€</td>
+                        <td>113 400€</td>
+                        <td>151 200€</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h3>🎯 Objectif Réaliste : 2 Ventes/Mois</h3>
+                <p><strong>170 000€ sur 3 ans</strong> avec seulement 8 rendez-vous qualifiés par mois.</p>
+            </div>
+        </div>
+
+        <!-- Slide 10: Call to Action -->
+        <div class="slide">
+            <div class="slide-number">10/10</div>
+            <h1>Prêt à Changer Votre Vie ?</h1>
+            
+            <div class="cta-section">
+                <h2 style="color: white; margin-bottom: 20px;">3 Étapes pour Commencer</h2>
+                
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <h4 style="color: white;">📞 Étape 1 : Entretien (30 min)</h4>
+                    <p style="color: white;">Valider votre profil et ambitions</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <h4 style="color: white;">🎓 Étape 2 : Formation (1 semaine)</h4>
+                    <p style="color: white;">Maîtriser produit et vente</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <h4 style="color: white;">💰 Étape 3 : Première Commission</h4>
+                    <p style="color: white;">Dans les 90 jours (garanti)</p>
+                </div>
+                
+                <button class="cta-button" onclick="window.open('tel:+33600000000')">📞 Appeler Maintenant</button>
+                <button class="cta-button" onclick="window.open('mailto:recrutement@ubbik.com')">✉️ Envoyer un Email</button>
+                
+                <div style="margin-top: 20px; background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px;">
+                    <h4 style="color: white;">🚨 Offre Limitée</h4>
+                    <p style="color: white;">Seulement 5 commerciaux recrutés pour Q1 2025</p>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <p style="color: white;">
+                        <strong>Contact Direct :</strong><br>
+                        📱 +33 6 XX XX XX XX<br>
+                        ✉️ recrutement@ubbik.com
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.05); border-radius: 10px;">
+                <p style="font-size: 0.9em; color: #666;">
+                    <strong>Garantie :</strong> Première vente dans les 90 jours ou remboursement formation
+                </p>
+            </div>
+        </div>
+
+        <div class="navigation-hint">
+            📱 <strong>Navigation :</strong> Faites glisser vers le haut pour voir la suite
+        </div>
+    </div>
+
+    <script>
+        // Script minimal pour éviter les problèmes sur mobile
+        console.log('Présentation Ubbik chargée avec succès');
+        
+        // Fonction simple pour les boutons d'action
+        function handleAction(action) {
+            if (action === 'call') {
+                window.open('tel:+33600000000');
+            } else if (action === 'email') {
+                window.open('mailto:recrutement@ubbik.com?subject=Candidature Commercial Ubbik');
+            }
+        }
+
+        // Optimisation mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ajuster la hauteur pour mobile
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+                slide.style.minHeight = window.innerHeight + 'px';
+            });
+
+            // Smooth scroll natif
+            document.documentElement.style.scrollBehavior = 'smooth';
+        });
+
+        // Gestion orientation
+        window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+                const slides = document.querySelectorAll('.slide');
+                slides.forEach(slide => {
+                    slide.style.minHeight = window.innerHeight + 'px';
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
